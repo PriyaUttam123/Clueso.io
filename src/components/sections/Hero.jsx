@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Play, ArrowRight } from 'lucide-react';
 import Button from '../common/Button';
+import Comparison from './Comparison';
 import './Hero.css';
 
 const Hero = () => {
@@ -62,12 +63,9 @@ const Hero = () => {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.4 }}
+                    style={{ width: '100%', maxWidth: '1200px', display: 'flex', justifyContent: 'center' }}
                 >
-                    <img
-                        src="https://framerusercontent.com/images/3pL34gK1mJ6hE03lq3G5EaU3Q.png"
-                        alt="Clueso Dashboard Interface"
-                        className="hero-image"
-                    />
+                    <Comparison />
                 </motion.div>
             </div>
         </section>

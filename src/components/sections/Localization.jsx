@@ -14,54 +14,54 @@ const content = {
     en: {
         title: "How to Book an Airbnb",
         steps: [
-            "From the website home, search for your desired destination and dates.",
-            "Find a place you like from the list of options.",
-            "Once you've found a place you like, click on it to view more details and read reviews. When you're ready to book, click on \"Reserve\"."
+            "Start by searching for your desired destination and dates on the home page.",
+            "Browse through the list of available homes and find one that suits your needs.",
+            "Click on a listing to view details, then select 'Reserve' to book your stay."
         ],
         uiText: { search: "Where", checkin: "Check in", checkout: "Check out", guests: "Who" }
     },
     es: {
         title: "Cómo reservar un Airbnb",
         steps: [
-            "Desde la página de inicio, busca tu destino y fechas deseadas.",
-            "Encuentra un lugar que te guste de la lista de opciones.",
-            "Una vez que encuentres un lugar, haz clic para ver más detalles y leer reseñas. Cuando estés listo, haz clic en \"Reservar\"."
+            "Comience buscando su destino y fechas deseadas en la página de inicio.",
+            "Navegue por la lista de hogares disponibles y encuentre uno que se adapte a sus necesidades.",
+            "Haga clic en un listado para ver detalles, luego seleccione 'Reservar' para reservar su estancia."
         ],
         uiText: { search: "Dónde", checkin: "Llegada", checkout: "Salida", guests: "Quién" }
     },
     de: {
         title: "Wie man ein Airbnb bucht",
         steps: [
-            "Suchen Sie von der Startseite aus nach Ihrem gewünschten Ziel und Datum.",
-            "Finden Sie aus der Liste der Optionen einen Ort, der Ihnen gefällt.",
-            "Sobald Sie einen Ort gefunden haben, klicken Sie darauf, um weitere Details und Bewertungen zu sehen."
+            "Beginnen Sie mit der Suche nach Ihrem gewünschten Ziel und Datum auf der Startseite.",
+            "Durchsuchen Sie die Liste der verfügbaren Unterkünfte und finden Sie eine, die Ihren Bedürfnissen entspricht.",
+            "Klicken Sie auf ein Inserat, um Details anzuzeigen, und wählen Sie dann 'Reservieren', um Ihren Aufenthalt zu buchen."
         ],
         uiText: { search: "Wohin", checkin: "Anreise", checkout: "Abreise", guests: "Wer" }
     },
     ja: {
         title: "Airbnbの予約方法",
         steps: [
-            "ウェブサイトのホームから、希望の目的地と日程を検索します。",
-            "オプションのリストから気に入った場所を見つけます。",
-            "気に入った場所が見つかったら、クリックして詳細やレビューを確認します。予約の準備ができたら、「予約する」をクリックします。"
+            "ホームページで希望の目的地と日程を検索することから始めます。",
+            "利用可能な家のリストを閲覧し、ニーズに合ったものを見つけます。",
+            "リスティングをクリックして詳細を表示し、「予約」を選択して滞在を予約します。"
         ],
         uiText: { search: "行き先", checkin: "チェックイン", checkout: "チェックアウト", guests: "人数" }
     },
     hi: {
         title: "Airbnb कैसे बुक करें",
         steps: [
-            "वेबसाइट के होम पेज से, अपनी इच्छित मंजिल और तारीखें खोजें।",
-            "विकल्पों की सूची में से वह जगह ढूंढें जो आपको पसंद हो।",
-            "एक बार जब आपको अपनी पसंद की जगह मिल जाए, तो अधिक विवरण और समीक्षाएं देखने के लिए उस पर क्लिक करें। जब आप बुक करने के लिए तैयार हों, तो \"रिज़र्व\" पर क्लिक करें।"
+            "होम पेज पर अपनी इच्छित मंजिल और तारीखें खोजने से शुरुआत करें।",
+            "उपलब्ध घरों की सूची ब्राउज़ करें और एक ऐसा घर खोजें जो आपकी आवश्यकताओं के अनुरूप हो।",
+            "विवरण देखने के लिए किसी लिस्टिंग पर क्लिक करें, फिर अपने प्रवास को बुक करने के लिए 'रिज़र्व' चुनें।"
         ],
         uiText: { search: "कहाँ", checkin: "चेक इन", checkout: "चेक आउट", guests: "कौन" }
     },
     ar: {
         title: "كيفية حجز Airbnb",
         steps: [
-            "من الصفحة الرئيسية للموقع، ابحث عن وجهتك وتواريخك المطلوبة.",
-            "اعثر على مكان يعجبك من قائمة الخيارات.",
-            "بمجرد العثور على مكان يعجبك، انقر عليه لعرض المزيد من التفاصيل وقراءة التقييمات. عندما تكون مستعدًا للحجز، انقر على \"حجز\"."
+            "ابدأ بالبحث عن وجهتك وتواريخك المطلوبة على الصفحة الرئيسية.",
+            "تصفح قائمة المنازل المتاحة واعثر على واحد يناسب احتياجاتك.",
+            "انقر على قائمة لعرض التفاصيل، ثم اختر 'حجز' لحجز إقامتك."
         ],
         uiText: { search: "إلى أين", checkin: "تسجيل وصول", checkout: "تسجيل مغادرة", guests: "الضيوف" }
     }
@@ -70,18 +70,6 @@ const content = {
 const Localization = () => {
     const [activeLang, setActiveLang] = useState('en');
     const currentContent = content[activeLang];
-
-    // Auto-rotate languages for demo effect
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setActiveLang(current => {
-    //             const currentIndex = languages.findIndex(l => l.code === current);
-    //             const nextIndex = (currentIndex + 1) % languages.length;
-    //             return languages[nextIndex].code;
-    //         });
-    //     }, 3000);
-    //     return () => clearInterval(interval);
-    // }, []);
 
     return (
         <section className="localization-section">
@@ -112,6 +100,7 @@ const Localization = () => {
                 </div>
 
                 <div className="demo-showcase">
+                    {/* Left Side: App Mockup */}
                     <div className="app-mockup">
                         <div className="browser-header">
                             <div className="dots">
@@ -121,7 +110,7 @@ const Localization = () => {
                         </div>
                         <div className="app-content" dir={activeLang === 'ar' ? 'rtl' : 'ltr'}>
                             <div className="search-bar">
-                                <div className="search-item">
+                                <div className="search-item active">
                                     <div className="label">{currentContent.uiText.search}</div>
                                     <div className="value">---</div>
                                 </div>
@@ -145,22 +134,22 @@ const Localization = () => {
                                 </div>
                             </div>
 
-                            <div className="hero-grid">
-                                <div className="grid-item big"></div>
-                                <div className="grid-item"></div>
-                                <div className="grid-item"></div>
-                                <div className="grid-item"></div>
-                                <div className="grid-item"></div>
+                            {/* Airbnb Grid Layout */}
+                            <div className="airbnb-grid">
+                                <div className="listing-large" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2080&auto=format&fit=crop)' }}></div>
+                                <div className="listing-small" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop)' }}></div>
+                                <div className="listing-small" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=2070&auto=format&fit=crop)' }}></div>
+                                <div className="listing-small" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop)' }}></div>
+                                <div className="listing-small" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=2070&auto=format&fit=crop)' }}></div>
                             </div>
 
-                            <div className="listings-grid">
-                                {[1, 2, 3, 4].map((i) => (
-                                    <div className="listing-card" key={i}>
-                                        <div className="img-placeholder"></div>
-                                        <div className="text-lines">
-                                            <div className="line title"></div>
-                                            <div className="line"></div>
-                                            <div className="line price"></div>
+                            <div className="listings-rows">
+                                {[1, 2].map((i) => (
+                                    <div className="listing-row-item" key={i}>
+                                        <div className="img-box skelet"></div>
+                                        <div className="txt-box">
+                                            <div className="skelet-line w-3-4"></div>
+                                            <div className="skelet-line w-1-2"></div>
                                         </div>
                                     </div>
                                 ))}
@@ -176,17 +165,19 @@ const Localization = () => {
                         </div>
                     </div>
 
+                    {/* Right Side: Guide Panel */}
                     <div className="guide-panel" dir={activeLang === 'ar' ? 'rtl' : 'ltr'}>
                         <h3>{currentContent.title}</h3>
-                        <div className="steps-list">
+                        <div className="steps-timeline">
                             {currentContent.steps.map((step, index) => (
-                                <div className="step-item" key={index}>
-                                    <div className="step-number">{index + 1}</div>
-                                    <p className="step-text">{step}</p>
+                                <div className="timeline-item" key={index}>
+                                    <div className="timeline-marker">{index + 1}</div>
+                                    <div className="timeline-content">
+                                        <p>{step}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
-                        <div className="scroll-indicator"></div>
                     </div>
                 </div>
             </div>
