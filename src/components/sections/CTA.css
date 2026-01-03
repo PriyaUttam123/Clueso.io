@@ -1,71 +1,176 @@
-.cta {
+.cta-experience {
     position: relative;
-    background: white;
+    background: #2d2d2d;
     overflow: hidden;
-    padding: 6rem 0;
+    padding: 0;
+    min-height: 500px;
 }
 
-.cta-gradient-bg {
+.cta-experience-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-icons-container {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, rgba(204, 82, 188, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
-.cta-content {
+.play-icon-3d {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.play-icon-3d:hover {
+    transform: scale(1.1) rotateY(15deg) rotateX(15deg);
+}
+
+.play-icon-3d:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.play-icon-3d:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.play-icon-3d:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.play-icon-3d:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.play-icon-3d:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.play-icon-3d:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+.play-triangle {
+    width: 0;
+    height: 0;
+    border-left: 18px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 4px;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotateY(10deg);
+    }
+}
+
+.cta-experience-content {
     position: relative;
     z-index: 10;
     text-align: center;
     max-width: 700px;
-    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.cta-title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    background: var(--color-accent-gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.cta-experience-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 2rem;
+    line-height: 1.2;
 }
 
-.cta-subtitle {
-    font-size: 1.25rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 2.5rem;
+.cta-experience-button {
+    background: linear-gradient(135deg, #E91E63 0%, #9C27B0 100%);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
 }
 
-.cta-buttons {
+.cta-experience-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(233, 30, 99, 0.4);
+}
+
+.cta-translate-label {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    color: #E91E63;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-.cta-note {
-    font-size: 0.875rem;
-    color: var(--color-text-secondary);
-}
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .cta {
-        padding: 4rem 0;
+    .cta-experience {
+        min-height: 400px;
     }
 
-    .cta-title {
+    .cta-experience-container {
+        height: 400px;
+    }
+
+    .cta-experience-title {
         font-size: 2rem;
     }
 
-    .cta-subtitle {
-        font-size: 1rem;
+    .play-icon-3d {
+        width: 40px;
+        height: 40px;
     }
 
-    .cta-buttons {
-        flex-direction: column;
-        align-items: stretch;
+    .play-triangle {
+        border-left: 12px solid white;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+
+    .cta-experience-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-experience-title {
+        font-size: 1.75rem;
+    }
+
+    .play-icon-3d {
+        width: 30px;
+        height: 30px;
     }
 }

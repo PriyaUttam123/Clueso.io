@@ -1,0 +1,145 @@
+.trusted-companies {
+    padding: 80px 20px;
+    background: #fafafa;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.trusted-companies-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 60px;
+    font-size: 14px;
+    color: #666;
+    flex-wrap: wrap;
+}
+
+.backed-by,
+.rated,
+.on {
+    color: #666;
+}
+
+.yc-link,
+.g2-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.yc-link:hover,
+.g2-link:hover {
+    opacity: 0.7;
+}
+
+.yc-logo,
+.g2-logo {
+    height: 18px;
+    width: auto;
+}
+
+.rating {
+    color: #333;
+    font-weight: 600;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.company-logo:hover {
+    transform: translateY(-8px) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: #d0d0d0;
+}
+
+.company-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+/* Special styling for specific companies */
+.company-logo:nth-child(2) .company-name,
+/* samsara */
+.company-logo:nth-child(7) .company-name,
+/* darwinbox */
+.company-logo:nth-child(10) .company-name {
+    /* moengage */
+    text-transform: lowercase;
+}
+
+.company-logo:nth-child(8) .company-name,
+/* movableink */
+.company-logo:nth-child(9) .company-name,
+/* keyfactor */
+.company-logo:nth-child(12) .company-name {
+    /* piceo */
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .companies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .company-logo {
+        padding: 20px;
+    }
+
+    .company-name {
+        font-size: 16px;
+    }
+
+    .trusted-companies {
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .companies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

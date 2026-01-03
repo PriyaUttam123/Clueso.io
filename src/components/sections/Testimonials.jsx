@@ -1,70 +1,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
 import './Testimonials.css';
 
 const Testimonials = () => {
-    const stats = [
-        { rating: '4.9', label: 'Average Rating' },
-        { count: '100,000+', label: 'Happy Users' }
-    ];
-
-    const companies = [
-        'Google', 'Microsoft', 'Amazon', 'Salesforce', 'HubSpot', 'Slack'
-    ];
-
     return (
-        <section className="testimonials section" id="testimonials">
-            <div className="container">
+        <section className="testimonials-product section" id="testimonials">
+            <div className="testimonials-product-container">
                 <motion.div
-                    className="section-header"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h2 className="section-title">
-                        You're in <span className="text-gradient">good company</span>
-                    </h2>
-                </motion.div>
-
-                <div className="stats-container">
-                    {stats.map((stat, index) => (
-                        <motion.div
-                            key={index}
-                            className="stat-card"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                            <div className="stat-stars">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} size={20} fill="currentColor" />
-                                ))}
-                            </div>
-                            <div className="stat-value">{stat.rating || stat.count}</div>
-                            <div className="stat-label">{stat.label}</div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                <motion.div
-                    className="companies-grid"
+                    className="testimonial-main"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8 }}
                 >
-                    {companies.map((company, index) => (
-                        <div key={index} className="company-logo">
-                            {company}
+                    <h2 className="testimonial-quote">
+                        Clueso has empowered our Product team to produce high-quality videos & training content{' '}
+                        <span className="highlight-faster">20x faster</span>
+                    </h2>
+
+                    <div className="testimonial-author">
+                        <div className="author-avatar">
+                            <img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' fill='%234A90E2'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='white'%3ESO%3C/text%3E%3C/svg%3E"
+                                alt="Sean O'Donnell"
+                            />
+                            <div className="company-badge">
+                                <span className="company-initial">P</span>
+                            </div>
                         </div>
-                    ))}
+                        <div className="author-info">
+                            <div className="author-name">Sean O'Donnell</div>
+                            <div className="author-title">Director of Product Management, Phenom</div>
+                        </div>
+                    </div>
                 </motion.div>
+
+                <div className="crafted-label">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M6 1L11 6L6 11L1 6L6 1Z" fill="#E91E63" />
+                    </svg>
+                    <span>CRAFTED WITH AI</span>
+                </div>
             </div>
         </section>
     );
 };
 
 export default Testimonials;
+
