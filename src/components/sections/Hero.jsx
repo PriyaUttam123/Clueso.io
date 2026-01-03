@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import { Play, ArrowRight } from 'lucide-react';
 import Button from '../common/Button';
 import Comparison from './Comparison';
@@ -8,6 +9,7 @@ import './Hero.css';
 
 const Hero = () => {
     const navigate = useNavigate();
+    const { user } = useAuth();
     return (
         <section className="hero">
             <div className="hero-bg-glow" />
@@ -50,8 +52,8 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <Button size="lg" onClick={() => navigate('/signup')}>
-                        Get Started Free
+                    <Button size="lg" onClick={() => navigate(user ? '/dashboard' : '/signup')}>
+                        {user ? 'Go to Dashboard' : 'Get Started Free'}
                         <ArrowRight size={18} />
                     </Button>
                     <Button variant="secondary" size="lg" onClick={() => navigate('/demo')}>
