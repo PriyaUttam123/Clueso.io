@@ -2,12 +2,15 @@ import React from 'react'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Hero from './components/sections/Hero'
+import TrustedCompanies from './components/sections/TrustedCompanies'
+import Comparison from './components/sections/Comparison'
 import Features from './components/sections/Features'
-import HowItWorks from './components/sections/HowItWorks'
-import UseCases from './components/sections/UseCases'
 import Testimonials from './components/sections/Testimonials'
-import FAQ from './components/sections/FAQ'
 import CTA from './components/sections/CTA'
+import UseCases from './components/sections/UseCases'
+import HowItWorks from './components/sections/HowItWorks'
+import Localization from './components/sections/Localization'
+import FAQ from './components/sections/FAQ'
 
 function App() {
     return (
@@ -15,12 +18,15 @@ function App() {
             <Navbar />
             <main>
                 <Hero />
+                <TrustedCompanies />
+                <Comparison />
                 <Features />
-                <HowItWorks />
-                <UseCases />
                 <Testimonials />
-                <FAQ />
                 <CTA />
+                <UseCases />
+                <HowItWorks />
+                <Localization />
+                <FAQ />
             </main>
             <Footer />
         </div>
@@ -28,4 +34,5 @@ function App() {
 }
 
 export default App
+
 

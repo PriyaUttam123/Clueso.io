@@ -4,12 +4,14 @@ import './CTA.css';
 
 const CTA = () => {
     const playIcons = [
-        { color: '#FF4D6D', delay: 0, x: -100, y: -50 },
-        { color: '#FF8E3C', delay: 0.2, x: -50, y: 20 },
-        { color: '#FFD93D', delay: 0.4, x: 0, y: -30 },
-        { color: '#6BCF7F', delay: 0.6, x: 50, y: 30 },
-        { color: '#4D9DE0', delay: 0.8, x: 100, y: -10 },
-        { color: '#9D4EDD', delay: 1.0, x: 130, y: 40 }
+        { color: '#FF4D6D', delay: 0, x: -350, y: -120 },
+        { color: '#FF8E3C', delay: 0.2, x: -380, y: 80 },
+        { color: '#FFD93D', delay: 0.4, x: -250, y: -180 },
+        { color: '#6BCF7F', delay: 0.6, x: 280, y: 120 },
+        { color: '#4D9DE0', delay: 0.8, x: 350, y: -140 },
+        { color: '#9D4EDD', delay: 1.0, x: 400, y: 50 },
+        { color: '#5C2D91', delay: 0.5, x: 0, y: -220 }, // New icon for top center
+        { color: '#00E676', delay: 0.7, x: 0, y: 200 }   // New icon for bottom center
     ];
 
     return (
