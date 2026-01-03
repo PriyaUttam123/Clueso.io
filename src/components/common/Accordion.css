@@ -1,0 +1,44 @@
+.accordion-item {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: #F9FAFB;
+}
+
+.accordion-header.active {
+    background-color: #F9FAFB;
+}
+
+.accordion-question {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.accordion-content {
+    overflow: hidden;
+}
+
+.accordion-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}

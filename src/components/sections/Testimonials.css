@@ -1,0 +1,80 @@
+.testimonials {
+    background: white;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-bg-primary);
+    border-radius: 16px;
+    min-width: 200px;
+}
+
+.stat-stars {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    color: #FBBF24;
+    margin-bottom: 1rem;
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 3rem;
+    background: var(--color-bg-primary);
+    border-radius: 16px;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-secondary);
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .stats-container {
+        gap: 1.5rem;
+    }
+
+    .stat-card {
+        min-width: 150px;
+        padding: 1.5rem;
+    }
+
+    .stat-value {
+        font-size: 2rem;
+    }
+
+    .companies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 2rem;
+    }
+}
