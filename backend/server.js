@@ -1,7 +1,11 @@
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -27,9 +31,14 @@ app.post('/api/login', (req, res) => {
     res.json({ message: 'Login successful', token: 'mock-jwt-token' });
 });
 
-app.get('/api/demo-status', (req, res) => {
+app.get('/', (req, res) => {
+    res.send('Clueso Backend is running!');
+});
+
+app.get('/api/health', (req, res) => {
     res.json({ status: 'active', message: 'Demo server is running smoothly' });
 });
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});

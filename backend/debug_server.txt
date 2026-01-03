@@ -1,0 +1,5 @@
+Server starting...
+Dotenv config successful
+Express app created
+Port set to 5000
+Server listening on port 5000

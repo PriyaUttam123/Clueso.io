@@ -1,0 +1,4 @@
+Starting debug...
+Imports successful
+Dotenv config successful
+Express app created
